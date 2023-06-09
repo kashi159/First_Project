@@ -43,6 +43,13 @@ const AddUser = (props) => {
       });
       return;
     }
+    if(enteredCollegeName.trim().length === 0){
+      setError({
+        title: "Invalid Input",
+        msg: "Please enter the college name"
+      });
+      return;
+    }
 
     const userData = {
       id: Math.random().toString(),
